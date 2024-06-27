@@ -59,6 +59,9 @@ html, body{
     width: 100%;
     height: calc(100% - 100px);
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     /* background-color: black; */
 }
 .bubble{
@@ -70,5 +73,10 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: center;
+    /* flex-wrap: wrap; */
     font-weight: 500;
+}
+.bubble:hover{
+    cursor:pointer;
+    background-color: rgb(50,75,50);
 }
