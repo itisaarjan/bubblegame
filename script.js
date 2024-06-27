@@ -4,11 +4,15 @@ function increaseScore(){
     score+=10;
     document.querySelector("#score-val").textContent=score;
 }
+function decreaseScore(){
+    score-=5;
+    document.querySelector("#score-val").textContent=score;
+}
 function makeBubble(){
     let clutter=""
 
     for (let i=0;i<168;i++){
-    clutter+=`<div class="bubble">${Math.floor(Math.random()*10)}</div>`
+    clutter+=`<div class="bubble">${Math.floor(Math.random()*20)}</div>`
     }
     document.querySelector("#pbottom").innerHTML=clutter;
 }
@@ -20,13 +24,13 @@ function runTimer(){
             document.querySelector(".timer-value").textContent=timer;
         }else{
             clearInterval(timerint);
-            document.querySelector("#pbottom").innerHTML=`<h1>Game Over</h1><h3>Score:${score}</h3>`;
+            document.querySelector("#pbottom").innerHTML=`<h1>Game Over</h1><h3 style="padding:40px 10px">Score:${score}</h3>`;
         }
         
     },1000);
 }
 function getNewHit(){
-    hitrn=Math.floor(Math.random()*10);
+    hitrn=Math.floor(Math.random()*20);
     document.querySelector("#hitval").textContent=hitrn;
 }
 
@@ -36,6 +40,8 @@ document.querySelector("#pbottom").addEventListener("click",function (details){
         increaseScore();
         makeBubble();
         getNewHit();
+    }else{
+        decreaseScore();
     }
 })
 
