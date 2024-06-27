@@ -20,7 +20,7 @@ function runTimer(){
             document.querySelector(".timer-value").textContent=timer;
         }else{
             clearInterval(timerint);
-            document.querySelector("#pbottom").innerHTML="";
+            document.querySelector("#pbottom").innerHTML=`<h1>Game Over</h1><h3>Score:${score}</h3>`;
         }
         
     },1000);
