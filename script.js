@@ -1,3 +1,4 @@
+//This is the JS file for the bubble game
 let score=0;
 let hitrn=0;
 function increaseScore(){
